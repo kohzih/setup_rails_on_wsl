@@ -61,6 +61,7 @@ $ bundle install
 - ruby-rubocop
 - SQL Formatter Mod
 - vscode-gemfile
+- indent-rainbow
 
 ## 5. settings.jsonの作成
 
