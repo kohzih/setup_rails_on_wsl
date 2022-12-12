@@ -206,6 +206,72 @@ $ gem -v
 > 3.3.26
 ```
 
+### 5.3. gemの環境設定値の確認
+
+```bash
+$ gem environment
+```
+
+<details>
+<summary>実行結果</summary>
+
+```bash
+RubyGems Environment:
+  - RUBYGEMS VERSION: 3.3.26
+  - RUBY VERSION: 3.1.3 (2022-11-24 patchlevel 185) [x86_64-linux]
+  - INSTALLATION DIRECTORY: /home/kohzih/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0
+  - USER INSTALLATION DIRECTORY: /home/kohzih/.gem/ruby/3.1.0
+  - RUBY EXECUTABLE: /home/kohzih/.rbenv/versions/3.1.3/bin/ruby
+  - GIT EXECUTABLE: /usr/bin/git
+  - EXECUTABLE DIRECTORY: /home/kohzih/.rbenv/versions/3.1.3/bin
+  - SPEC CACHE DIRECTORY: /home/kohzih/.gem/specs
+  - SYSTEM CONFIGURATION DIRECTORY: /home/kohzih/.rbenv/versions/3.1.3/etc
+  - RUBYGEMS PLATFORMS:
+     - ruby
+     - x86_64-linux
+  - GEM PATHS:
+     - /home/kohzih/.rbenv/versions/3.1.3/lib/ruby/gems/3.1.0
+     - /home/kohzih/.gem/ruby/3.1.0
+  - GEM CONFIGURATION:
+     - :update_sources => true
+     - :verbose => true
+     - :backtrace => true
+     - :bulk_threshold => 1000
+  - REMOTE SOURCES:
+     - https://rubygems.org/
+  - SHELL PATH:
+     - /home/kohzih/.rbenv/versions/3.1.3/bin
+     - /home/kohzih/.rbenv/libexec
+     - /home/kohzih/.rbenv/plugins/ruby-build/bin
+     - /home/kohzih/.nodenv/shims
+     - /home/kohzih/.nodenv/bin
+     - /home/kohzih/.rbenv/shims
+     - /home/kohzih/.rbenv/bin
+     - /usr/local/sbin
+     - /usr/local/bin
+     - /usr/sbin
+     - /usr/bin
+     - /sbin
+     - /bin
+     - /usr/games
+     - /usr/local/games
+     - /usr/lib/wsl/lib
+     - /mnt/c/WINDOWS/system32
+     - /mnt/c/WINDOWS
+     - /mnt/c/WINDOWS/System32/Wbem
+     - /mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/
+     - /mnt/c/WINDOWS/System32/OpenSSH/
+     - /mnt/c/Program Files/dotnet/
+     - /mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common
+     - /mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL
+     - /mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL
+     - /mnt/c/Users/KOJI/AppData/Local/Microsoft/WindowsApps
+     - /mnt/c/Users/KOJI/AppData/Local/Programs/Microsoft VS Code/bin
+     - /snap/bin
+```
+
+</details>
+
 ## 6. Bundlerのインストール
 
 ### 6.1. Bundlerのインストール
@@ -214,21 +280,16 @@ $ gem -v
 $ gem install bundler
 ```
 
-<details>
-<summary>よく使うコマンド(詳細は現場Rails参照)</summary>
-
-- `bundler install xxx`
-- `bundler exe [コマンド]`
-- `bundler init`
-- `bundler update`
-
-</details>
-
 ### 6.2. gemの一覧を表示し、Bundlerのバージョンを確認する
 
 ```bash
 $ gem list
+```
 
+<details>
+<summary>実行結果</summary>
+
+```bash
 *** LOCAL GEMS ***
 
 abbrev (default: 0.1.0)
@@ -317,6 +378,8 @@ weakref (default: 0.1.1)
 yaml (default: 0.2.0)
 zlib (default: 2.1.1)
 ```
+
+</details>
 
 ## 7. Rails のインストール
 
@@ -530,60 +593,18 @@ $ fcitx-config-gtk3    # 日本語入力の設定確認
 $ google-chrome    # chromeの起動確認
 ```
 
-## 10. VS Codeでの開発支援機能のセットアップ(任意)
-
-#### 1) solargrapfとrubocopのインストール
-
-```bash
-gem install solargraph
-gem install rubocop
-```
-
-#### 2) ruby-debug-ide のインストール
-
-これをインストールしないとステップ実行ができない。  
-
-```bash
-gem install ruby-debug-ide
-```
-
-#### 3) launch.jsonの作成・修正
-
-開いているファイルを、F5キーでデバッグ開始する設定。  
-
-```JSON
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Debug Local File",
-            "type": "Ruby",
-            "request": "launch",
-            //"program": "${workspaceRoot}/main.rb"
-            "program": "${file}"
-        }
-    ]
-}
-```
-
-## 参考
-
-### 1 ～ 4
+## 参考記事
 
 - [WSLを利用したLinux環境の構築](https://amorphous.tf.chiba-u.jp/memo.files/wsl/wsl_linux.html#orge81da1d)
 - [Ruby開発環境の構築](https://www.koeki-prj.org/~akito/it/rubyenv/rubyenv.html)
 - [Windows内のLinux環境を手軽に初期化、WSL2の賢い操作法](https://xtech.nikkei.com/atcl/nxt/column/18/01863/112600004/)
 - [WindowsでWSL、Ubuntu、Rubyをインストール](https://qiita.com/tsukamoto/items/6e9a181b6e0defc27a39)
 - [rbenv rehashをちゃんと理解する](https://mogulla3.tech/articles/2020-12-29-01))
-- [VS CodeでRubyで書かれたプログラムを簡単デバッグ](https://ottan.jp/posts/2020/05/ruby-vscode-debug/)
-- [VSCode:Rubyデバッグできない。環境、構成をつくりなおす、gemのアンインストールなど](https://pagetaka.hatenablog.jp/entry/2019/10/02/151215)
-- [[-bash: rbenv: コマンドが見つかりません]aws(ec2)上のrbenvの初期設定エラーの解決方法](https://qiita.com/KONTA2019/items/e966d4b106d981faef52)
+- [[-bash: rbenv: コマンドが見つかりません]aws(ec2)上のrbenvの初期設定エラーの解決方法](https://qiita.com/KONTA2019/items/e966d4b106d981faef52)
 - [Linux上にyarnとnodenvで作るVue.jsの開発環境](https://ubiqlog.com/archives/13835)
 - [nodenvの環境構築](https://qiita.com/282Haniwa/items/a764cf7ef03939e4cbb1)
 - [nodenvをインストールする-Node.js](https://fujiya228.com/node-nodenv-installation/)
 - [corepack is 何?](https://zenn.dev/teppeis/articles/2021-05-corepack)
-
-### 5
 
 - [非推奨となったapt-keyの代わりにsigned-byとgnupgを使う方法](https://www.clear-code.com/blog/2021/5/5.html)
 - [apt-key is deprecated への対応](https://blog.1q77.com/2022/10/apt-key-is-deprecated/)
