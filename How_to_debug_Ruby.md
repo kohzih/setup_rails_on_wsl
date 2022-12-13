@@ -32,6 +32,7 @@ group :development, :test do
     gem 'rubocop', require: false
     gem 'ruby-debug-ide', require: false
     gem 'solargraph', require: false
+    gem 'test-unit', require: false
 end
 ```
 
@@ -122,3 +123,5 @@ Metrics の警告が煩わしい場合は、`except`を使用する。
 - [VSCodeでRails開発](https://qiita.com/aki77/items/5223667a095fa4dedf83)
 - [VSCodeの拡張機能でRailsと仲良くなる](https://qiita.com/hakshu/items/98ed12c32da97474b68d)
 - [VS Code で自動的に RuboCop を実行する (rbenv, asdf 対応)](https://zenn.dev/noraworld/articles/vscode-rubocop)
+- [Test::Unitでテストを書く](https://qiita.com/repeatedly/items/727b08599d87af7fa671)
+- [test-unit](https://test-unit.github.io/ja/index.html)
