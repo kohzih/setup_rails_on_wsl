@@ -46,6 +46,8 @@ $ bundle install
 
 ## 4. Ubuntu側へVSCodeの拡張機能のインストール
 
+※`rubocop`は、`Ruby`の拡張機能でも実行できるため、`ruby-rubocop`の拡張機能は不要。また[不具合](https://zenn.dev/noraworld/articles/vscode-rubocop)もあり。
+
 - GitLens
 - HTMLHint
 - Japanese Language Pack for Visual Studio Code
@@ -59,7 +61,6 @@ $ bundle install
 - Rainbow End
 - Ruby
 - Ruby Solargraph
-- ruby-rubocop
 - SQL Formatter Mod
 - vscode-gemfile
 - indent-rainbow
