@@ -72,6 +72,7 @@ $ bundle install
 ```json
 {
     "solargraph.useBundler": true,
+    "ruby.useLanguageServer": true,
     "ruby.useBundler": true,
     "ruby.lint": {
         "rubocop": {
