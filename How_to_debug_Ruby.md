@@ -2,7 +2,7 @@
 
 ## 1. Gemfileの作成
 
-`Gemfile`が存在する場合はひの手順は不要。
+`Gemfile`がすでに存在する場合、この手順は不要。
 
 ```bash
 $ bundle init
