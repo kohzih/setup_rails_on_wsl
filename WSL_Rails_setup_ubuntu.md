@@ -497,8 +497,17 @@ $ nodenv versions
 ```bash
 $ nodenv global 19.2.0
 ```
+#### 6) yarnのインストール
 
-#### 6) corepackでのyarnの有効化
+node.jsの各バージョンごとにインストールが必要
+
+##### 6-1) npmでyarnをインストールする (node.js < 16.10 の場合)
+
+```bash
+$ npm install --global yarn
+```
+
+##### 6-2) corepackでのyarnの有効化 (node.js >= 16.10 の場合)
 
 corepack enable yarn で yarn が使えるようになる。
 
@@ -509,6 +518,10 @@ $ corepack enable yarn
 $ nodenv rehash
 $ exec $SHELL -l    # 不要かもしれない
 ```
+
+##### 参考記事
+
+[【Ubuntu】Yarnをインストールしてパッケージ管理を行う](https://self-development.info/%E3%80%90ubuntu%E3%80%91yarn%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%AE%A1%E7%90%86%E3%82%92%E8%A1%8C%E3%81%86/)
 
 #### 7) yarnのバージョンの確認
 
