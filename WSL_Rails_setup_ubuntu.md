@@ -132,8 +132,8 @@ sudo apt install curl wget
 ```bash
 sudo apt install autoconf bison patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
 ```
-[GitHub rbenv/ruby-build wiki Suggested build environment(推奨するビルド環境)](https://github.com/rbenv/ruby-build/wiki#Suggested-build-environment)
 
+[GitHub rbenv/ruby-build wiki Suggested build environment(推奨するビルド環境)](https://github.com/rbenv/ruby-build/wiki#Suggested-build-environment)
 
 ## 4. Rubyのインストール
 
@@ -396,6 +396,14 @@ $ rails -v
 
 > Rails 5.2.6
 ```
+
+### 7.3. SQLite3を使用するため必要なライブラリ
+
+```bash
+$ sudo apt install libsqlite3-dev
+```
+
+[【Tips】Ubuntuへのsqlite3 gemインストール時に発生しうるエラーへの対処](https://qiita.com/GandT/items/277d10d3f3fc091ffc76)
 
 ## 8. Node.js のインストール
 
