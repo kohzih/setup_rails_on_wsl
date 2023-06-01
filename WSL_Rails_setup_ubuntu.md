@@ -90,7 +90,7 @@ $ sudo apt install git
 $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 ```
 
-### 3.3. パスの設定と初期化処理の津追加
+### 3.3. パスの設定と初期化処理の追加
 
 ```bash
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
